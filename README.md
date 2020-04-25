@@ -1,5 +1,11 @@
 # CryptoBridgePro
-#CryptoBridgePro connects MetaTrader platform to your favorite Crypto Exchanges for trading
+Connect MetaTrader platform to your favorite Crypto Exchanges for trading, robot development, and automated trading
+- Binance , Binance US, Binance Futures, Binance DEX
+- Bitmex
+- Bybit
+- CoinbasePro (in development)
+- Deribit (in development)
+- Kucoin (in development)
 
 ## Wiki 
 [Wiki](https://github.com/fx4btc/MT5-Crypto-Bridge-Bitmex-Bybit-Binance/wiki)
