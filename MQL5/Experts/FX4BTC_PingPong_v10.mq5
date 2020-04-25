@@ -17,7 +17,7 @@ string exchangename = "";
 int OnInit()
 {
    bridge.Init_Api_Keys(Exchange_Number);
-   // What exchange are will trading at?
+   // What exchange are we trading at?
    exchangename = bridge.Get_Exchange_Name(Exchange_Number);
    EventSetMillisecondTimer(Exchange_RateLimiterDelay);
    return (INIT_SUCCEEDED);
@@ -131,5 +131,20 @@ void OnTimer()
          {
             Print(" Sell Limit Placed ");
          }
+         /* 
+         
+          Now we have a buy limit and sell limit order placed on the exchange. 
+          
+          The limit orders are near the top of the order book, and once both are executed we made a profit from
+            rebates 
+            spread
+            
+          Once both orders are filled, the robot starts over again 
+          Use at your own risk. 
+          This is just an example of how to use the #CryptoBridgePro class library. 
+          
+           
+         */
+          
    }
 }
