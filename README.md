@@ -1,11 +1,14 @@
 # CryptoBridgePro
 Connect MetaTrader platform to your favorite Crypto Exchanges for trading, robot development, and automated trading
-- Binance , Binance US, Binance Futures, Binance DEX
+- Binance , Binance US, Binance Futures - Live/Demo, Binance DEX
 - Bitmex
-- Bybit
+- Bybit - Live/Demo
 - CoinbasePro (in development)
 - Deribit (in development)
 - Kucoin (in development)
+- Huobi Futures (in development)
+- OKEx Futures (in development)
+- BitFyler Futures (in development)
 
 ## Wiki 
 [Wiki](https://github.com/fx4btc/MT5-Crypto-Bridge-Bitmex-Bybit-Binance/wiki)
