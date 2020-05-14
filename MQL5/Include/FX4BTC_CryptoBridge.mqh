@@ -35,7 +35,7 @@ bool BinanceFutures_Open_Trade_Stop(string sym, string side, string orderType, d
 bool BinanceFutures_Open_Trade_StopLimit(string sym, string side, string orderType, double orderSize, double orderPrice, double stopPrice);
 bool BinanceFutures_Balance(string sym, string quotebase);
 bool BinanceFutures_GetPriceBest(string sym, int quote_digit);
-bool BinanceFutures_GetPrice(string sym);
+bool BinanceFutures_GetPrice(string sym,int qt_precision);
 bool BinanceFutures_GetOpenOrders(string sym, int quote_precision);
 bool BinanceFutures_GetServerTime();
 bool BinanceFutures_Set_Leverage(string sym, double leverage);
@@ -67,7 +67,7 @@ bool Bybit_GetOpenOrders(string sym, int quote_precision);
 bool Bybit_GetPriceBest(string sym, int qt_precision);
 bool Bybit_GetPrice(string sym, int qt_precision);
 bool Bybit_GetServerTime();
-bool Bybit_Get_API_Key(string key, string secret);
+bool Bybit_Get_API_Key(string key, string secret, string livedemo);
 bool Bybit_Leverage(int liveOne_demoTwo);           // returns the users leverage
 bool Bybit_Positions(string sym, int qt_precision); // returns the users open positions
 bool Bybit_ClosePosition(string sym, string ordertype);
@@ -118,7 +118,7 @@ bool Deribit_Set_Leverage(string sym, double leverage);
 bool Deribit_Cancel_Trade_All(string sym);
 #import
 
-#define VERSION 1.31
+#define VERSION 1.32
 /*
    https://github.com/fx4btc/MT5-Crypto-Bridge-Bitmex-Bybit-Binance/wiki/Change-log
 */
@@ -135,6 +135,7 @@ input string BinanceFutures_LiveDemo = "demo";
 
 input string Bybit_Api_Key = "";
 input string Bybit_Api_Secret = "";
+input string Bybit_LiveDemo = "live";
 
 input string Bitmex_Api_Key = "";
 input string Bitmex_Api_Secret = "";
@@ -248,7 +249,7 @@ bool CryptoBridge::Init_Api_Keys(int exchange)
   if (exchange == 2)
   {
 
-    return (Bybit_Get_API_Key(Bybit_Api_Key, Bybit_Api_Secret));
+    return (Bybit_Get_API_Key(Bybit_Api_Key, Bybit_Api_Secret,Bybit_LiveDemo));
   }
   if (exchange == 3)
   {
@@ -598,7 +599,7 @@ bool CryptoBridge::Get_Price(string sym, int ExchangeNumber, int quote_precision
 
   if (ExchangeNumber == 5)
   {
-    return (BinanceFutures_GetPrice(sym));
+    return (BinanceFutures_GetPrice(sym,quote_precision));
   }
   if (ExchangeNumber == 6)
   {
