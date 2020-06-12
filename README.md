@@ -19,6 +19,9 @@ Learn how to make robots, trade manually, and autotrade with the CryptoBridgePro
 
 ![UI](https://charts.mql5.com/24/409/btcusdt-binance-m1-genesis-markets-ltd.png)
 
+![UI 1.32](https://github.com/fx4btc/CryptoBridgePro/blob/master/BTCUSD.tryM1.png)
+
+
 ## Robots
 
 Robots are automated trading strategies or tools to make trading easier. Each robot will have several parameters to adjust to suit your needs. These robots are universal and can work on spot or margin trading. 
